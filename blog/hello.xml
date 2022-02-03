@@ -1,0 +1,66 @@
+<speak xmlns="http://www.w3.org/2001/10/synthesis"
+    xmlns:mstts="http://www.w3.org/2001/mstts"
+    xmlns:emo="http://www.w3.org/2009/10/emotionml" version="1.0" xml:lang="en-US">
+
+
+    <voice name="de-CH-LeniNeural">
+        <prosody rate="7%" pitch="-1%">
+        
+Bei meinem Beispiel handelt es sich nicht um eine Audiodatei, sondern um  Sprachsynthesis. 
+
+Da ich meinen Podcast in englischer Sprach vorgsehe, hier drei Beispiele.
+
+Zuerst eine weibliche Stimme
+        </prosody>
+    </voice>
+
+
+    <voice name="en-US-JennyNeural">
+        <mstts:express-as style="assistant">
+            <prosody rate="0%" pitch="0%">
+One day
+You will forget him
+            </prosody>
+        </mstts:express-as>
+    </voice>
+
+
+    <voice name="de-CH-LeniNeural">
+        <prosody rate="7%" pitch="-1%">
+        
+Aber ich kann auch ei Stimme in einer fröhlichä Varianta wählen.
+        </prosody>
+    </voice>
+
+    <voice name="en-US-AriaNeural">
+        <mstts:express-as style="cheerful">
+            <prosody rate="0%" pitch="0%">
+One day
+You will forget him
+            </prosody>
+        </mstts:express-as>
+    </voice>
+
+
+
+    <voice name="de-CH-LeniNeural">
+        <prosody rate="7%" pitch="-1%">
+Oder eher eine nännliche stimme mit britischem Akzent.
+        </prosody>
+    </voice>
+
+    <voice name="en-US-GuyNeural">
+        <prosody rate="0%" pitch="0%">
+One day
+You will forget him
+        </prosody>
+    </voice>
+
+
+    <voice name="de-CH-LeniNeural">
+        <prosody rate="7%" pitch="-1%">
+Und jetzt geht die Arbeit los.
+        </prosody>
+    </voice>
+
+</speak>
