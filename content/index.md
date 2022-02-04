@@ -1,6 +1,6 @@
 ---
 title: Parser
-subline: The sound of tehnology
+subline: A podcast about the sounds of technology
 info: Stefan Huber · February 3, 2022 · Workbook
 debug: false
 template: "blog"
@@ -26,53 +26,26 @@ blockquote {
 }
 </style>
 
-# Hello 👋
-
-- Stefan Huber
-- Developer
-- Podcast Listener since 2005
-
-## Example
-
-<figure>
-    <audio
-        controls
-        src="/media/welcome.wav">
-            Your browser does not support the <code>audio</code> element.
-    </audio>
-    <figcaption></figcaption>
-</figure>
-
-- Why did you choose this audio example?
-- What does it have to do with you?
-- What are your expectations of the course – and of yourself?
 
 
-
-### Generator
-[Generator](https://azure.microsoft.com/en-us/services/cognitive-services/text-to-speech/#features)
-
-### Source
-
-<div class="mini-code">
-
-```html
-#include "./content/2022-02-03-first-start/hello.xml"
-```
-
-</div>
 
 <br>
 <br>
 <br>
 
-# Blog
 
-#include "./content/2021-10-27-initial/index.md"
+
+#include "./content/2022-02-04-finding-the-format/index.md"
+
+
+#include "./content/2022-02-03-first-start/index.md"
+
+#include "./content/2021-11-03-text-to-sound-processing/index.md"
 
 #include "./content/2021-10-30-title/index.md"
 
-#include "./content/2021-11-03-text-to-sound-processing/index.md"
+#include "./content/2021-10-27-initial/index.md"
+
 
 <grid columns="1">
 

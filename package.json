@@ -1,0 +1,34 @@
+{
+  "name": "parser.blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "dhow build",
+    "start:watch": "nodemon --ext js,md --watch pages --watch content --exec 'dhow dev'",
+    "start": "dhow dev",
+    "deploy": "npm run build && gh-pages -d out -b gh-pages",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/signalwerk/parser.blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/signalwerk/parser.blog/issues"
+  },
+  "homepage": "https://github.com/signalwerk/parser.blog#readme",
+  "devDependencies": {
+    "@fsoc/dhow": "^1.0.6",
+    "gh-pages": "^3.2.3",
+    "microsoft-cognitiveservices-speech-sdk": "^1.20.0",
+    "nodemon": "^2.0.15",
+    "signalwerk.documentation.md": "file:packages/signalwerk.documentation.md"
+  },
+  "workspaces": [
+    "./packages/*"
+  ]
+}

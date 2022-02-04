@@ -9,21 +9,20 @@ import { typeProcessor } from "../packages/signalwerk.documentation.md/src/jsx-w
 // https://github.com/sethen/markdown-include
 const includePattern = /#include\s("|')([^"']+)\1/gi;
 
-const Home = () => {
-  const content = fs.readFileSync("./content/index.md", "utf8");
-
+function readMD(path) {
+  const content = fs.readFileSync(path, "utf8");
   const withIncludes = `${content}`.replace(
     includePattern,
-    (str, g1, g2, g3) => {
-      console.log("---- import ----");
-      console.log({ str });
-      console.log({ g2 });
-
-      return fs.readFileSync(g2, "utf8");
+    (str, _, includePath) => {
+      console.log(`include: '${includePath}'`);
+      return readMD(includePath);
     }
   );
+  return withIncludes;
+}
 
-  const data = parse(withIncludes);
+const Home = () => {
+  const data = parse(readMD("./content/index.md"));
 
   fs.writeFileSync("./render.json", JSON.stringify(data, null, 2));
 
