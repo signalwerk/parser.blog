@@ -1,6 +1,6 @@
 ---
 title: Parser
-subline: The sound of computers
+subline: The sound of tehnology
 info: Stefan Huber · February 3, 2022 · Workbook
 debug: false
 template: "blog"
@@ -45,7 +45,7 @@ blockquote {
 
 - Why did you choose this audio example?
 - What does it have to do with you?
-- What are your expectations of the course - and of yourself?
+- What are your expectations of the course – and of yourself?
 
 
 
@@ -57,10 +57,7 @@ blockquote {
 <div class="mini-code">
 
 ```html
-
-#include "./content/hello.xml"
-
-
+#include "./content/2022-02-03-first-start/hello.xml"
 ```
 
 </div>
