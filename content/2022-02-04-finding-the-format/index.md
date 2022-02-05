@@ -54,8 +54,9 @@ People interested in the history of the internet get each season 8 short episode
 
 ### Roles
 * Producer – Steven
-* Narrator (Explain) – Sarah
+* Narrator (Explain) – Sara
 * Narrator (Questions/Sidekick) – John
+  * Marketing
 
 
 
