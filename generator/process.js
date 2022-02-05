@@ -6,11 +6,65 @@ let content = fs.readFileSync(episode, "utf8");
 
 content = `${content}`;
 
+const LOUDER_REGEX = /([\*]{2})(.*?)\1/g;
+const LOUD_REGEX = /([\*])(.*?)\1/g;
+const DEEP_REGEX = /([_])(.*?)\1/g;
+const DEEPER_REGEX = /([_]{2})(.*?)\1/g;
+
+function prosody(text, { rate, pitch, volume = 60 }) {
+  let content = text;
+  function open({ rate, pitch, volume }) {
+    return `<prosody rate="${rate}%" pitch="${pitch}%" volume="${volume}">`;
+  }
+  let standard = open({ rate, pitch, volume });
+  let end = `</prosody>`;
+
+  content = content.replace(LOUDER_REGEX, (str, _, em) => {
+    return `${end}${open({
+      rate,
+      pitch,
+      volume: volume + 24,
+    })}${em}${end}${standard}`;
+  });
+  content = content.replace(LOUD_REGEX, (str, _, em) => {
+    return `${end}${open({
+      rate,
+      pitch,
+      volume: volume + 10,
+    })}${em}${end}${standard}`;
+  });
+  content = content.replace(DEEPER_REGEX, (str, _, em) => {
+    return `${end}${open({
+      rate: rate - 2,
+      pitch: pitch - 12,
+      volume,
+    })}${em}${end}${standard}`;
+  });
+  content = content.replace(DEEP_REGEX, (str, _, em) => {
+    return `${end}${open({
+      rate: rate - 2,
+      pitch: pitch - 6,
+      volume,
+    })}${em}${end}${standard}`;
+  });
+
+  return `${standard}${content.trim()}${end}`;
+}
+
 function speak(person, content) {
   return {
-    N: `<voice name="en-GB-RyanNeural"><prosody rate="0%" pitch="-2%">${content.trim()}</prosody></voice>`,
-    J: `<voice name="en-US-GuyNeural"><mstts:express-as style="newscast" ><prosody rate="7%" pitch="0%">${content.trim()}</prosody></mstts:express-as></voice>`,
-    S: `<voice name="en-US-AmberNeural"><prosody rate="3%" pitch="-7%">${content.trim()}</prosody></voice>`,
+    N: `<voice name="en-GB-RyanNeural">${prosody(content, {
+      rate: 0,
+      pitch: -2,
+    })}</voice>`,
+    J: `<voice name="en-US-GuyNeural"><mstts:express-as style="newscast" >${prosody(
+      content,
+      { rate: 7, pitch: 0 }
+    )}</mstts:express-as></voice>`,
+    S: `<voice name="en-US-AmberNeural">${prosody(content, {
+      rate: 3,
+      pitch: -7,
+    })}</voice>`,
   }[person];
 }
 
@@ -49,4 +103,4 @@ content = speakerReplace("J", content);
 content = speakerReplace("S", content);
 content = doc(content);
 
-fs.writeFileSync(episode.replace(/\.md$/, '.xml'), content);
+fs.writeFileSync(episode.replace(/\.md$/, ".xml"), content);

@@ -8,14 +8,16 @@ require("dotenv").config();
 
 const { AZURE_SUBSCRIPTION_KEY, AZURE_SERVICE_REGION } = process.env;
 
-const episode = "00-episode-zero";
+const episode = process.argv[2];
 
 // replace with your own subscription key,
 // service region (e.g., "westus"), and
 // the name of the file you save the synthesized audio.
-var filename = `${episode}.wav`;
+var filename = episode
+  .replace(/\.xml$/, ".wav")
+  .replace("/content/", "/public/media/");
 
-const text = `${fs.readFileSync(`./${episode}.xml`, "utf8")}`;
+const text = `${fs.readFileSync(episode, "utf8")}`;
 
 // console.log({ text });
 //   const text = "Speech synthesis canceled";
@@ -30,8 +32,24 @@ var speechConfig = sdk.SpeechConfig.fromSubscription(
   AZURE_SERVICE_REGION
 );
 
+
+speechConfig.speechSynthesisOutputFormat =
+  sdk.SpeechSynthesisOutputFormat.Riff24Khz16BitMonoPcm;
+
 // create the speech synthesizer.
 var synthesizer = new sdk.SpeechSynthesizer(speechConfig, audioConfig);
+
+// The event synthesizing signals that a synthesized audio chunk is received.
+// You will receive one or more synthesizing events as a speech phrase is synthesized.
+// You can use this callback to streaming receive the synthesized audio.
+// synthesizer.synthesizing = function (s, e) {
+//   var str =
+//     "(synthesizing) Reason: " +
+//     sdk.ResultReason[e.result.reason] +
+//     " Audio chunk length: " +
+//     e.result.audioData.byteLength;
+//   console.log(str);
+// };
 
 // start the synthesizer and wait for a result.
 //   synthesizer.speakTextAsync(
