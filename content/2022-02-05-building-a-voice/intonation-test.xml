@@ -1,0 +1,21 @@
+
+<speak xmlns="http://www.w3.org/2001/10/synthesis"
+    xmlns:mstts="http://www.w3.org/2001/mstts"
+    xmlns:emo="http://www.w3.org/2009/10/emotionml" version="1.0" xml:lang="en-US">
+
+
+<voice name="en-US-GuyNeural"><mstts:express-as style="newscast" ><prosody rate="7%" pitch="0%" volume="60">This is parser</prosody></mstts:express-as></voice>
+
+<voice name="en-US-GuyNeural"><mstts:express-as style="newscast" ><prosody rate="7%" pitch="0%" volume="60"></prosody><prosody rate="7%" pitch="0%" volume="84">This</prosody><prosody rate="7%" pitch="0%" volume="60"> </prosody><prosody rate="7%" pitch="0%" volume="70">is</prosody><prosody rate="7%" pitch="0%" volume="60"> </prosody><prosody rate="5%" pitch="-12%" volume="60">parser</prosody><prosody rate="7%" pitch="0%" volume="60"></prosody></mstts:express-as></voice>
+
+
+<voice name="en-US-JennyNeural"><break time="100ms" /></voice>
+
+<voice name="en-US-AmberNeural"><prosody rate="3%" pitch="-7%" volume="60">A podcast about the first 100 years of the internet</prosody></voice>
+
+<voice name="en-US-AmberNeural"><prosody rate="3%" pitch="-7%" volume="60">A </prosody><prosody rate="3%" pitch="-7%" volume="84">podcast</prosody><prosody rate="3%" pitch="-7%" volume="60"> about </prosody><prosody rate="3%" pitch="-7%" volume="70">the first</prosody><prosody rate="3%" pitch="-7%" volume="60"> 100 years of </prosody><prosody rate="1%" pitch="-19%" volume="60">the internet</prosody><prosody rate="3%" pitch="-7%" volume="60"></prosody></voice>
+
+<voice name="en-US-JennyNeural"><break time="100ms" /></voice>
+
+
+</speak>

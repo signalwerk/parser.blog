@@ -1,0 +1,47 @@
+
+<speak xmlns="http://www.w3.org/2001/10/synthesis"
+    xmlns:mstts="http://www.w3.org/2001/mstts"
+    xmlns:emo="http://www.w3.org/2009/10/emotionml" version="1.0" xml:lang="en-US">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<voice name="en-GB-RyanNeural"><prosody rate="0%" pitch="-2%" volume="60"></prosody><prosody rate="0%" pitch="-2%" volume="84">This</prosody><prosody rate="0%" pitch="-2%" volume="60"> </prosody><prosody rate="0%" pitch="-2%" volume="70">is</prosody><prosody rate="0%" pitch="-2%" volume="60"> </prosody><prosody rate="-2%" pitch="-14%" volume="60">parser</prosody><prosody rate="0%" pitch="-2%" volume="60"></prosody></voice>
+<voice name="en-US-JennyNeural"><mstts:express-as style="assistant" ><prosody rate="3%" pitch="-1%" volume="60">A </prosody><prosody rate="3%" pitch="-1%" volume="84">podcast</prosody><prosody rate="3%" pitch="-1%" volume="60"> about </prosody><prosody rate="3%" pitch="-1%" volume="70">the first</prosody><prosody rate="3%" pitch="-1%" volume="60"> 100 years of </prosody><prosody rate="1%" pitch="-13%" volume="60">the internet</prosody><prosody rate="3%" pitch="-1%" volume="60"></prosody></mstts:express-as></voice>
+<voice name="en-US-JennyNeural"><break time="100ms" /></voice>
+<voice name="en-US-GuyNeural"><mstts:express-as style="newscast" ><prosody rate="5%" pitch="0%" volume="60">In this episode, we have a look at a file format called <say-as interpret-as="characters">mp3</say-as> that changed distribution and business models of music forever</prosody></mstts:express-as></voice>
+<voice name="en-US-JennyNeural"><break time="100ms" /></voice>
+<voice name="en-GB-RyanNeural"><prosody rate="0%" pitch="-2%" volume="60">Sarah, why do we talk about a file format? Isn't the brief history of digital files over? When looking at current mobile devices, we barely have to deal with files at all. It's all about </prosody><prosody rate="0%" pitch="-2%" volume="70">cloud</prosody><prosody rate="0%" pitch="-2%" volume="60"> nowadays.</prosody></voice>
+<voice name="en-US-JennyNeural"><mstts:express-as style="assistant" ><prosody rate="3%" pitch="-1%" volume="60">Thank you, John. I see two questions here; first, what is a file format used for? Second, what is the purpose of this one specific format we speak today about?</prosody></mstts:express-as></voice>
+<voice name="en-US-JennyNeural"><mstts:express-as style="assistant" ><prosody rate="3%" pitch="-1%" volume="60">Let me start with the today's main actor: <say-as interpret-as="characters">mp3</say-as>. Broadly described, it is a file format that is used to store music or more general sounds. While in today's world an end user often don't handle with files too much anymore I can guarantee you that this format is still in wide use. If you watch a movie or listen to music on a streaming service, chances are high you will find this audio format – or one of its successor in use. And here we link to the second part of your question; what is the purpose? In general, we can say the format is used to transfer as much sound in as few bytes as possible.</prosody></mstts:express-as></voice>
+<voice name="en-GB-RyanNeural"><prosody rate="0%" pitch="-2%" volume="60">So it is about saving storage on a server or my mobile?</prosody></voice>
+<voice name="en-US-JennyNeural"><mstts:express-as style="assistant" ><prosody rate="3%" pitch="-1%" volume="60">Yes, it is. But we are also talking about transfer speed. Let's imagine you start a song from your streaming platform. If you hit the play button, you want to avoid waiting forever before the track starts.</prosody></mstts:express-as></voice>
+<voice name="en-GB-RyanNeural"><prosody rate="0%" pitch="-2%" volume="60">right</prosody></voice>
+<voice name="en-US-JennyNeural"><mstts:express-as style="assistant" ><prosody rate="3%" pitch="-1%" volume="60">So by reducing the file size, the transfer takes less time, and you can listen to the sound earlier and don't need to wait in silence.</prosody></mstts:express-as></voice>
+<voice name="en-GB-RyanNeural"><prosody rate="0%" pitch="-2%" volume="60">I see. But when you say it's a small file size – why was it big in the first place?</prosody></voice>
+<voice name="en-US-JennyNeural"><mstts:express-as style="assistant" ><prosody rate="3%" pitch="-1%" volume="60">Oh. I never thought it that way around. Let us step back in history. Not all the way back to vinyl, but where sound started to be digital for the end user.</prosody></mstts:express-as></voice>
+<voice name="en-US-JennyNeural"><mstts:express-as style="assistant" ><prosody rate="3%" pitch="-1%" volume="60">In <say-as interpret-as="date" format="y">1982</say-as> the Digital Audio Compact Disc – <say-as interpret-as="characters">CD</say-as> – was released. It was a medium used to store audio. it was – as the name indicates – small. But the compact was referencing the physical dimension. To have a high fidelity while consuming your music, the audio needs a lot of data. The Audio CD was storing this in a very general and uncompressed format. No matter if you record a noisy machine or a soft piano, the audio is stored in the same way.</prosody></mstts:express-as></voice>
+<voice name="en-GB-RyanNeural"><prosody rate="0%" pitch="-2%" volume="60">Sounds like a general solution for similar problems. Task completed. Right?</prosody></voice>
+<voice name="en-US-JennyNeural"><mstts:express-as style="assistant" ><prosody rate="3%" pitch="-1%" volume="60">That's the first thought every engineer would have. You sample an audio in tiny impulses and store this information. But the perception of sound is not the same as the actual sound. For example, humans are very bad with differentiating high-pitched audio. Or you don't hear certain nuances of a sound when shortly before there was a loud impuls. And if you know how where we don't hear nuances, you can reduce the amount of data you need to store.</prosody></mstts:express-as></voice>
+<voice name="en-GB-RyanNeural"><prosody rate="0%" pitch="-2%" volume="60">That sounds complicated</prosody></voice>
+<voice name="en-US-JennyNeural"><mstts:express-as style="assistant" ><prosody rate="3%" pitch="-1%" volume="60">Right. And it has to do with our perception and not only with solving a technical task.</prosody></mstts:express-as></voice>
+<voice name="en-GB-RyanNeural"><prosody rate="0%" pitch="-2%" volume="60">And here the <say-as interpret-as="characters">mp3</say-as> comes in?</prosody></voice>
+<voice name="en-US-JennyNeural"><mstts:express-as style="assistant" ><prosody rate="3%" pitch="-1%" volume="60">Right! The «Moving Picture Expert's Group» is an alliance of working groups that have been tinkering on the standardization of the audio and video formats. In December <say-as interpret-as="date" format="y">1988</say-as> the Working Group called for an audio coding standard and 14 suggestions from the audio industry, telecommunications companies and research organizations were submitted.</prosody></mstts:express-as></voice>
+<voice name="en-GB-RyanNeural"><prosody rate="0%" pitch="-2%" volume="60">14 Standards? That doesn't sound like a standard, that's wild west!</prosody></voice>
+<voice name="en-US-JennyNeural"><mstts:express-as style="assistant" ><prosody rate="3%" pitch="-1%" volume="60">No, no. Those were just drafts and ideas for further research. The standardization progress then started.</prosody></mstts:express-as></voice>
+<voice name="en-GB-RyanNeural"><prosody rate="0%" pitch="-2%" volume="60">Sounds like long discussions.</prosody></voice>
+<voice name="en-US-JennyNeural"><mstts:express-as style="assistant" ><prosody rate="3%" pitch="-1%" volume="60">Exactly. It took a few years before under the guidance of the Fraunhofer Society in <say-as interpret-as="date" format="y">1992</say-as> the finalized standard was released.</prosody></mstts:express-as></voice>
+
+</speak>

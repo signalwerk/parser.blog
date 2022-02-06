@@ -54,8 +54,11 @@ People interested in the history of the internet get each season 8 short episode
 
 ### Roles
 * Producer – Steven
+  * Born 1981
 * Narrator (Explain) – Sara
+  * Born 1978
 * Narrator (Questions/Sidekick) – John
+  * Born 2003
   * Marketing
 
 
@@ -67,7 +70,7 @@ Let's here our speakers and let them introduce themselves and the podcast;
 <figure>
     <audio
         controls
-        src="/media/2022-02-04-finding-the-format/00-episode-zero.wav">
+        src="/media/2022-02-04-finding-the-format/00-episode-zero.mp3">
             Your browser does not support the <code>audio</code> element.
     </audio>
     <figcaption></figcaption>

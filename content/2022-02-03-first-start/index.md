@@ -35,7 +35,7 @@ To show the power of the media I created a simple example with fully generated a
 <figure>
     <audio
         controls
-        src="/media/2022-02-03-first-start/hello.wav">
+        src="/media/2022-02-03-first-start/hello.mp3">
             Your browser does not support the <code>audio</code> element.
     </audio>
     <figcaption></figcaption>
@@ -45,9 +45,10 @@ To show the power of the media I created a simple example with fully generated a
 
 
 ### Generator
-[Generator](https://azure.microsoft.com/en-us/services/cognitive-services/text-to-speech/#features)
+[Microsoft text to speech service](https://azure.microsoft.com/en-us/services/cognitive-services/text-to-speech/#features)
 
 
+<!-- 
 
 ### Source
 
@@ -57,4 +58,6 @@ To show the power of the media I created a simple example with fully generated a
 #include "./content/2022-02-03-first-start/hello.xml"
 ```
 
-</div>
+</div> 
+
+-->
