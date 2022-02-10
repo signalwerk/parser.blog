@@ -16,7 +16,7 @@
         </itunes:owner>
         <itunes:image href="https://parser.signalwerk.ch/feed/artwork.jpg" />
         <itunes:category text="Technology"/>
-        <itunes:explicit>no</itunes:explicit>
+        <itunes:explicit>false</itunes:explicit>
         <item>
             <itunes:episodeType>full</itunes:episodeType>
             <itunes:episode>1</itunes:episode>
@@ -25,9 +25,9 @@
             <description>mp3 and napster how did they change exchange of music</description>
             <enclosure length="12231285" type="audio/mpeg" url="https://parser.signalwerk.ch/media/2022-02-05-building-a-voice/SS01-E01-test.mp3" />
             <guid isPermaLink="false">ss01e01v100</guid>
-            <pubDate>Sat, 5 Feb 2022 16:30:00 GMT</pubDate>
+            <pubDate>Sat, 05 Feb 2022 16:30:00 GMT</pubDate>
             <itunes:duration>512</itunes:duration>
-            <itunes:explicit>no</itunes:explicit>
+            <itunes:explicit>false</itunes:explicit>
         </item>
         <item>
             <itunes:episodeType>trailer</itunes:episodeType>
@@ -37,9 +37,9 @@
             <description>Hello world!</description>
             <enclosure length="1906857" type="audio/mpeg" url="https://parser.signalwerk.ch/media/2022-02-04-finding-the-format/00-episode-zero.mp3" />
             <guid isPermaLink="false">ss01e00v100</guid>
-            <pubDate>Fri, 4 Feb 2022 20:00:00 GMT</pubDate>
+            <pubDate>Fri, 04 Feb 2022 20:00:00 GMT</pubDate>
             <itunes:duration>82</itunes:duration>
-            <itunes:explicit>no</itunes:explicit>
+            <itunes:explicit>false</itunes:explicit>
         </item>
 
     </channel>
