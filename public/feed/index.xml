@@ -18,7 +18,10 @@
         <itunes:category text="Technology"/>
         <itunes:explicit>no</itunes:explicit>
         <item>
-            <itunes:title>SS01 – E01 sound in mp3 </itunes:title>
+            <itunes:episodeType>full</itunes:episodeType>
+            <itunes:episode>1</itunes:episode>
+            <itunes:season>1</itunes:season>
+            <title>SS01 – E01 sound in mp3 </title>
             <description>mp3 and napster how did they change exchange of music</description>
             <enclosure length="12231285" type="audio/mpeg" url="https://parser.signalwerk.ch/media/2022-02-05-building-a-voice/SS01-E01-test.mp3" />
             <guid isPermaLink="false">ss01e01v100</guid>
@@ -28,7 +31,9 @@
         </item>
         <item>
             <itunes:episodeType>trailer</itunes:episodeType>
-            <itunes:title>SS01 – E00 Hello world</itunes:title>
+            <itunes:episode>0</itunes:episode>
+            <itunes:season>1</itunes:season>
+            <title>SS01 – E00 Hello world</title>
             <description>Hello world!</description>
             <enclosure length="1906857" type="audio/mpeg" url="https://parser.signalwerk.ch/media/2022-02-04-finding-the-format/00-episode-zero.mp3" />
             <guid isPermaLink="false">ss01e00v100</guid>
