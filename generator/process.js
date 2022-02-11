@@ -23,7 +23,7 @@ function prosody(text, { rate, pitch, volume = 60 }) {
     return `${end}${open({
       rate,
       pitch,
-      volume: volume + 24,
+      volume: volume + 18,
     })}${em}${end}${standard}`;
   });
   content = content.replace(LOUD_REGEX, (str, _, em) => {
@@ -53,18 +53,18 @@ function prosody(text, { rate, pitch, volume = 60 }) {
 
 function speak(person, content) {
   return {
-    N: `<voice name="en-GB-RyanNeural">${prosody(content, {
+    J: `<voice name="en-GB-RyanNeural">${prosody(content, {
       rate: 0,
       pitch: -2,
     })}</voice>`,
-    J: `<voice name="en-US-GuyNeural"><mstts:express-as style="newscast" >${prosody(
+    N: `<voice name="en-US-GuyNeural"><mstts:express-as style="newscast" >${prosody(
       content,
-      { rate: 7, pitch: 0 }
+      { rate: 5, pitch: 0 }
     )}</mstts:express-as></voice>`,
-    S: `<voice name="en-US-AmberNeural">${prosody(content, {
+    S: `<voice name="en-US-JennyNeural"><mstts:express-as style="assistant" >${prosody(content, {
       rate: 3,
-      pitch: -7,
-    })}</voice>`,
+      pitch: -1,
+    })}</mstts:express-as></voice>`,
   }[person];
 }
 
@@ -96,11 +96,30 @@ function pause(content) {
   );
 }
 
-content = removeComments(content);
-content = pause(content);
-content = speakerReplace("N", content);
-content = speakerReplace("J", content);
-content = speakerReplace("S", content);
-content = doc(content);
+function processFile(text) {
+  let content = text;
+  content = removeComments(content);
+  content = pause(content);
+  content = speakerReplace("N", content);
+  content = speakerReplace("J", content);
+  content = speakerReplace("S", content);
+  content = doc(content);
 
-fs.writeFileSync(episode.replace(/\.md$/, ".xml"), content);
+  return content;
+}
+
+const junks = content.split("--- junk ---");
+
+junks.forEach((text, index) => {
+  const content = processFile(text);
+
+  if (junks.length > 1) {
+    fs.writeFileSync(
+      episode.replace(/\.md$/, `-00${index}.xml`),
+      content,
+      "utf8"
+    );
+  } else {
+    fs.writeFileSync(episode.replace(/\.md$/, ".xml"), content);
+  }
+});
